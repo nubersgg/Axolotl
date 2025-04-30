@@ -12,8 +12,37 @@ const floors = [
     price: `${i * 7} coins`,
     per: `${(i + 5) % 15}%`,
     active: i % 5 !== 0
+  })),
+  generateCircularLayout().map((chest, i) => ({
+    ...chest,
+    name: `F3 Chest ${i + 1}`,
+    price: `${i * 6} coins`,
+    per: `${(i + 2) % 12}%`,
+    active: i % 4 !== 0
+  })),
+  generateCircularLayout().map((chest, i) => ({
+    ...chest,
+    name: `F4 Chest ${i + 1}`,
+    price: `${i * 4} coins`,
+    per: `${(i + 3) % 8}%`,
+    active: i % 3 !== 0
+  })),
+  generateCircularLayout().map((chest, i) => ({
+    ...chest,
+    name: `F5 Chest ${i + 1}`,
+    price: `${i * 3} coins`,
+    per: `${(i + 4) % 7}%`,
+    active: i % 2 !== 0
+  })),
+  generateCircularLayout().map((chest, i) => ({
+    ...chest,
+    name: `F6 Chest ${i + 1}`,
+    price: `${i * 2} coins`,
+    per: `${(i + 1) % 6}%`,
+    active: true
   }))
 ];
+
 
 function generateCircularLayout() {
   const sideChests = [];
@@ -70,5 +99,3 @@ function generateCircularLayout() {
 
   return allChests;
 }
-
-

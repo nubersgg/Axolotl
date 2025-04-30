@@ -46,7 +46,6 @@ const floors = [
 
 function generateCircularLayout() {
   const sideChests = [];
-
   const spacing = 32;
 
   // 8 chests on the wall
@@ -97,8 +96,10 @@ function generateCircularLayout() {
     });
   }
 
+  console.log(allChests); // Log the chest positions
   return allChests;
 }
+
 
 function renderFloor(index) {
   const container = document.getElementById("chest-grid");

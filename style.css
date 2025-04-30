@@ -1,23 +1,12 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-
-#floor-selector {
-  text-align: center;
-  padding: 10px;
-}
-
 #main-container {
   display: flex;
-  justify-content: center;
 }
 
 #info-panel {
-  width: 250px;
+  width: 200px;
   padding: 10px;
   background: #f0f0f0;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
 }
 
 #floor-container {
@@ -26,9 +15,10 @@ body {
   height: 512px;
 }
 
-#floor-image {
+#floor-container img {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 #chest-grid {
@@ -45,12 +35,9 @@ body {
   height: 24px;
   background-color: rgba(0, 255, 0, 0.3);
   border: 2px solid rgba(0, 255, 0, 0.8);
+  border-radius: 4px;
   cursor: pointer;
 }
-.chest.inactive {
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
 
 .chest.inactive {
   background-color: rgba(255, 0, 0, 0.2);

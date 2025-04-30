@@ -25,8 +25,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 512px;
-  height: 512px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Optional: prevents interaction with the chest container itself */
 }
 
 .chest {

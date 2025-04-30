@@ -41,13 +41,16 @@ body {
 
 .chest {
   position: absolute;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background-color: rgba(0, 255, 0, 0.3);
-  border: 2px solid rgba(0, 255, 0, 0.7);
-  box-sizing: border-box;
+  border: 2px solid rgba(0, 255, 0, 0.8);
   cursor: pointer;
 }
+.chest.inactive {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
 
 .chest.inactive {
   background-color: rgba(255, 0, 0, 0.2);

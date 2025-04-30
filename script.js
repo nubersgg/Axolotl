@@ -101,8 +101,8 @@ function generateCircularLayout() {
 }
 
 function renderFloor(index) {
-  const container = document.getElementById("image-container");
-  container.querySelectorAll(".chest").forEach(el => el.remove());
+  const container = document.getElementById("chest-grid");
+  container.innerHTML = ""; // Clear existing chests
 
   const floor = floors[index];
   floor.forEach((chest, i) => {
@@ -110,10 +110,16 @@ function renderFloor(index) {
     el.className = "chest" + (chest.active ? "" : " inactive");
     el.style.left = chest.x + "px";
     el.style.top = chest.y + "px";
-    el.title = `${chest.name}\n${chest.price}\n${chest.per}`;
+
+    el.addEventListener("click", () => {
+      document.getElementById("info-name").textContent = chest.name;
+      document.getElementById("info-price").textContent = "Price: " + chest.price;
+      document.getElementById("info-per").textContent = "Per: " + chest.per;
+    });
+
     container.appendChild(el);
   });
 }
 
-// Show floor 0 initially
 renderFloor(0);
+

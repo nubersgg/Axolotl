@@ -99,3 +99,21 @@ function generateCircularLayout() {
 
   return allChests;
 }
+
+function renderFloor(index) {
+  const container = document.getElementById("image-container");
+  container.querySelectorAll(".chest").forEach(el => el.remove());
+
+  const floor = floors[index];
+  floor.forEach((chest, i) => {
+    const el = document.createElement("div");
+    el.className = "chest" + (chest.active ? "" : " inactive");
+    el.style.left = chest.x + "px";
+    el.style.top = chest.y + "px";
+    el.title = `${chest.name}\n${chest.price}\n${chest.per}`;
+    container.appendChild(el);
+  });
+}
+
+// Show floor 0 initially
+renderFloor(0);

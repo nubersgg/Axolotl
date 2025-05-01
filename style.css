@@ -14,16 +14,22 @@ body {
 }
 
 #info-panel {
-  width: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1800px;
+  height: 990px;
   padding: 10px;
-  background: #f0f0f0;
+  background: #d3d3d3;
   font-family: Arial, sans-serif;
 }
 
 #floor-container {
-  position: relative;
-  width: 950px;
-  height: 950px;
+  position: absolute;
+  top: 0;
+  left: 46%;
+  width: 1010px;
+  height: 1010px;
 }
 
 #floor-image {
@@ -35,18 +41,23 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 950px;
-  height: 950px;
+  width: 1010px;
+  height: 1010px;
 }
 
 .chest {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   background-color: rgba(0, 255, 0, 0.3);
   border: 2px solid rgba(0, 255, 0, 0.7);
   box-sizing: border-box;
   cursor: pointer;
+}
+
+.chest.NoStock {
+  background-color: rgba(217, 255, 0, 0.3);
+  border: 2px solid rgba(238, 255, 0, 0.7);
 }
 
 .chest.inactive {

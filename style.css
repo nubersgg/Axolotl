@@ -3,11 +3,6 @@ body {
   font-family: sans-serif;
 }
 
-#floor-selector {
-  text-align: center;
-  padding: 10px;
-}
-
 #main-container {
   display: flex;
   justify-content: center;
@@ -70,4 +65,57 @@ body {
 .chest.inactive {
   background-color: rgba(255, 0, 0, 0.2);
   border: 2px solid rgba(255, 0, 0, 0.7);
+}
+
+#search-container {
+  text-align: center;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 500px;
+}
+
+.chest.highlight {
+  background-color: rgba(38, 0, 255, 0.541); /* Yellow highlight */
+  border-color: rgb(25, 0, 255);
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+#search-bar {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#floor-selector {
+  text-align: center;
+  padding: 10px;
+  position:absolute;
+  top: 0;
+  left: 100px;
+}
+
+#suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+#suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#suggestions li:hover {
+  background: #f0f0f0;
 }

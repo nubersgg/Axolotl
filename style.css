@@ -20,8 +20,15 @@ body {
   width: 1800px;
   height: 990px;
   padding: 10px;
-  background: #d3d3d3;
+  background: #727272;
   font-family: Arial, sans-serif;
+}
+
+#info-image {
+  width: 520px;
+  height: 520px;
+  image-rendering: pixelated; /* Ensures sharp, pixelated rendering */
+  image-rendering: crisp-edges; /* Fallback for older browsers */
 }
 
 #floor-container {

@@ -12,16 +12,16 @@ const floors = [
     { x: OriginX-171, y: OriginY-349, name: "Birch Leaves", price: "0$", per: "32", active: true },
     { x: OriginX-154, y: OriginY-349, name: "Jungle Leaves", price: "0$", per: "32", active: true },
     { x: OriginX-137, y: OriginY-349, name: "Acacia Leaves", price: "0$", per: "32", active: true },
-    { x: OriginX-105, y: OriginY-364, name: "Dark oak", price: "0$", per: "32", active: true },
-    { x: OriginX-90, y: OriginY-364, name: "Mangrove", price: "0$", per: "32", active: true },
-    { x: OriginX-55, y: OriginY-384, name: "Oak Logs", price: "0$", per: "32", active: true },
-    { x: OriginX-38, y: OriginY-384, name: "Spruce Logs", price: "0$", per: "32", active: true },
-    { x: OriginX-24, y: OriginY-384, name: "Birch Logs", price: "0$", per: "32", active: true },
-    { x: OriginX-8, y: OriginY-384, name: "Jungle Logs", price: "0$", per: "32", active: true },
-    { x: OriginX+10, y: OriginY-384, name: "Acacia Logs", price: "0$", per: "32", active: true },
-    { x: OriginX+26, y: OriginY-384, name: "Dark Oak Logs", price: "0$", per: "32", active: true },
-    { x: OriginX+40, y: OriginY-384, name: "Mangrove Logs", price: "0$", per: "32", active: true },
-    { x: OriginX+57, y: OriginY-384, name: "Cherry Logs", price: "0$", per: "32", active: true },
+    { x: OriginX-105, y: OriginY-364, name: "Dark oak leaves", price: "0$", per: "32", active: true },
+    { x: OriginX-90, y: OriginY-364, name: "Mangrove leaves", price: "0$", per: "32", active: true },
+    { x: OriginX-55, y: OriginY-384, name: "Oak Log", price: "0$", per: "32", active: true },
+    { x: OriginX-38, y: OriginY-384, name: "Spruce Log", price: "0$", per: "32", active: true },
+    { x: OriginX-24, y: OriginY-384, name: "Birch Log", price: "0$", per: "32", active: true },
+    { x: OriginX-8, y: OriginY-384, name: "Jungle Log", price: "0$", per: "32", active: true },
+    { x: OriginX+10, y: OriginY-384, name: "Acacia Log", price: "0$", per: "32", active: true },
+    { x: OriginX+26, y: OriginY-384, name: "Dark Oak Log", price: "0$", per: "32", active: true },
+    { x: OriginX+40, y: OriginY-384, name: "Mangrove Log", price: "0$", per: "32", active: true },
+    { x: OriginX+57, y: OriginY-384, name: "Cherry Log", price: "0$", per: "32", active: true },
     { x: OriginX+92, y: OriginY-364, name: "Cheery Leaves", price: "0$", per: "32", active: true },
     { x: OriginX+107, y: OriginY-364, name: "Flowering Azalea Leaves", price: "0$", per: "32", active: true },
     { x: OriginX+139, y: OriginY-349, name: "Azalea Leaves", price: "0$", per: "32", active: true },
@@ -36,11 +36,11 @@ const floors = [
     { x: OriginX+349, y: OriginY-171, name: "Allium", price: "0$", per: "32", active: true },
     { x: OriginX+349, y: OriginY-154, name: "Azure Bluet", price: "0$", per: "32", active: true },
     { x: OriginX+349, y: OriginY-137, name: "Red Tulip", price: "0$", per: "32", active: true },
-    { x: OriginX+364, y: OriginY-105, name: "Ornage Tulip", price: "0$", per: "32", active: true },
+    { x: OriginX+364, y: OriginY-105, name: "Orange Tulip", price: "0$", per: "32", active: true },
     { x: OriginX+364, y: OriginY-90, name: "White Tulip", price: "0$", per: "32", active: true },
     { x: OriginX+384, y: OriginY-55, name: "Pink Tulip", price: "0$", per: "32", active: true },
     { x: OriginX+384, y: OriginY-38, name: "Oxeye Daisy", price: "0$", per: "32", active: true },
-    { x: OriginX+384, y: OriginY-24, name: "CornBlower", price: "0$", per: "32", active: true },
+    { x: OriginX+384, y: OriginY-24, name: "CornFlower", price: "0$", per: "32", active: true },
     { x: OriginX+384, y: OriginY-8, name: "Lily of the Valley", price: "0$", per: "32", active: true },
     { x: OriginX+384, y: OriginY+10, name: "Torchflower", price: "0$", per: "32", active: true },
     { x: OriginX+384, y: OriginY+26, name: "Wither Rose", price: "0$", per: "32", active: true },
@@ -109,11 +109,18 @@ const floors = [
   ],
 ];
 
+function getChestImage(chestName) {
+  // Convert chest name to lowercase and replace spaces with underscores
+  const formattedName = chestName.toLowerCase().replace(/ /g, "_");
+  // Construct the file path
+  return `Images/${formattedName}.png`;
+}
+
 function loadFloor(index) {
   currentFloor = index;
   document.getElementById("floor-image").src = `floors/floor${index + 1}.png`;
   const grid = document.getElementById("chest-grid");
-  grid.innerHTML = "";
+  grid.innerHTML = ""; // Clear the grid
 
   floors[index].forEach((chest, i) => {
     const div = document.createElement("div");
@@ -121,6 +128,8 @@ function loadFloor(index) {
     if (!chest.active) div.classList.add("inactive");
     div.style.left = chest.x + "px";
     div.style.top = chest.y + "px";
+
+    // Add click event to show chest info
     div.onclick = () => showInfo(chest);
     grid.appendChild(div);
   });
@@ -130,6 +139,17 @@ function showInfo(chest) {
   document.getElementById("info-name").textContent = chest.name;
   document.getElementById("info-price").textContent = "Price: " + chest.price;
   document.getElementById("info-per").textContent = "Per: " + chest.per;
+
+  // Display the chest image in the info section
+  const infoImage = document.getElementById("info-image");
+  const imagePath = getChestImage(chest.name);
+  console.log(`Loading image: ${imagePath}`); // Debugging
+  infoImage.src = imagePath;
+  infoImage.alt = chest.name;
+  infoImage.onerror = () => {
+    console.log(`Image not found: ${imagePath}, loading default image.`);
+    infoImage.src = "Images/default.png"; // Fallback image if the chest image is missing
+  };
 }
 
 // Create floor buttons
@@ -141,4 +161,5 @@ for (let i = 0; i < floors.length; i++) {
   selector.appendChild(btn);
 }
 
+// Load the first floor by default
 loadFloor(0);

@@ -1,8 +1,8 @@
 const NUM_CHESTS = 88;
 let currentFloor = 0;
-const OriginX =497;
-const OriginY = 496;
-const scaleFactor = 1.19;
+const OriginX =458;
+const OriginY = 460;
+const scaleFactor = 1.10;
 // Example: 2 floors, with positions as pixel coords
 const floors = [
   [ //Floor 1

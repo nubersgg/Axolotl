@@ -12,8 +12,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1800px;
-  height: 990px;
+  width: 600px;
+  height: 936px;
   padding: 10px;
   background: #727272;
   font-family: Arial, sans-serif;
@@ -68,8 +68,8 @@ body {
   position: absolute;
   top: 0px;
   left: 500px;
-  width: 1800px;
-  height: 990px;
+  width: 1359px;
+  height: 936px;
   padding: 10px;
   background: #3a3a3a;
   font-family: Arial, sans-serif;
@@ -85,9 +85,9 @@ body {
 #floor-container {
   position: absolute;
   top: 0;
-  left: 860px;
-  width: 1010px;
-  height: 1010px;
+  left: 925px;
+  width: 935px;
+  height: 935px;
 }
 
 #floor-image {
@@ -99,8 +99,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1010px;
-  height: 1010px;
+  width: 935px;
+  height: 935px;
 }
 
 .chest {
@@ -181,30 +181,30 @@ body {
   font-size: 70px;
   color: #ffffff;
   position: absolute;
-  top: 170px;
-  left: 480px;
+  top: 160px;
+  left: 450px;
 }
 #East-text {
   font-family: 'Arial', sans-serif;
   font-size: 50px;
   color: #ffffff;
   position: absolute;
-  top: 470px;
-  left: 780px;
+  top: 450px;
+  left: 720px;
 }
 #South-text {
   font-family: 'Arial', sans-serif;
   font-size: 50px;
   color: #ffffff;
   position: absolute;
-  top: 780px;
-  left: 480px;
+  top: 730px;
+  left: 450px;
 }
 #West-text {
   font-family: 'Arial', sans-serif;
   font-size: 50px;
   color: #ffffff;
   position: absolute;
-  top: 470px;
+  top: 450px;
   left: 200px;
 }

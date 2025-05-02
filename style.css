@@ -54,6 +54,8 @@ body {
   width: 64px; /* Set image size */
   height: 64px;
   margin-right: 10px; /* Add spacing between image and text */
+  image-rendering: pixelated; /* Ensures sharp, pixelated rendering */
+  image-rendering: crisp-edges; /* Fallback for older browsers */
 }
 
 .floor-item span {

@@ -19,6 +19,60 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.floor-item.active {
+  background: #888; /* Highlight color for the active floor */
+  color: white; /* Ensure text is readable */
+}
+
+#floor-selector {
+  list-style: none;
+  padding: 0;
+  margin: 80px 0 0 -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+}
+
+.floor-item {
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  background: #444; /* Background color for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.3s;
+  text-align: left;
+}
+
+.floor-item:hover {
+  background: #666; /* Change background on hover */
+}
+
+.floor-item img {
+  width: 64px; /* Set image size */
+  height: 64px;
+  margin-right: 10px; /* Add spacing between image and text */
+}
+
+.floor-item span {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+#floor-selector-container {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  width: 1800px;
+  height: 990px;
+  padding: 10px;
+  background: #3a3a3a;
+  font-family: Arial, sans-serif;
+}
+
 #info-image {
   width: 520px;
   height: 520px;
@@ -29,7 +83,7 @@ body {
 #floor-container {
   position: absolute;
   top: 0;
-  left: 46%;
+  left: 860px;
   width: 1010px;
   height: 1010px;
 }
@@ -118,4 +172,37 @@ body {
 
 #suggestions li:hover {
   background: #f0f0f0;
+}
+
+#North-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 70px;
+  color: #ffffff;
+  position: absolute;
+  top: 170px;
+  left: 480px;
+}
+#East-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  position: absolute;
+  top: 470px;
+  left: 780px;
+}
+#South-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  position: absolute;
+  top: 780px;
+  left: 480px;
+}
+#West-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  position: absolute;
+  top: 470px;
+  left: 200px;
 }

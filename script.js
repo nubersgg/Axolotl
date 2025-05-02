@@ -23,7 +23,7 @@ const floors = [
     { x: OriginX+26, y: OriginY-384, name: "Dark Oak Log", price: "0$", per: "32", active: true },
     { x: OriginX+40, y: OriginY-384, name: "Mangrove Log", price: "0$", per: "32", active: true },
     { x: OriginX+57, y: OriginY-384, name: "Cherry Log", price: "0$", per: "32", active: true },
-    { x: OriginX+92, y: OriginY-364, name: "Cheery Leaves", price: "0$", per: "32", active: true },
+    { x: OriginX+92, y: OriginY-364, name: "Cherry Leaves", price: "0$", per: "32", active: true },
     { x: OriginX+107, y: OriginY-364, name: "Flowering Azalea Leaves", price: "0$", per: "32", active: true },
     { x: OriginX+139, y: OriginY-349, name: "Azalea Leaves", price: "0$", per: "32", active: true },
     { x: OriginX+156, y: OriginY-349, name: "Azalea", price: "0$", per: "32", active: true },
@@ -667,18 +667,60 @@ function showInfo(chest) {
   };
 }
 
-// Create floor buttons
+const floorNames = [
+  "Nature",
+  "Building Blocks",
+  "Decoration",
+  "Farming",
+  "Ocean",
+  "Nether",
+];
+
+// Get the floor selector container
 const selector = document.getElementById("floor-selector");
-for (let i = 0; i < floors.length; i++) {
-  const btn = document.createElement("button");
-  btn.textContent = `Floor ${i + 1}`;
-  btn.onclick = () => loadFloor(i);
-  selector.appendChild(btn);
+
+// Dynamically create floor buttons
+floorNames.forEach((floorName, index) => {
+  const button = document.createElement("button");
+  button.classList.add("floor-item");
+
+  // Add the image
+  const img = document.createElement("img");
+  img.src = `floors/floorbutton${index + 1}.png`; // Path to the image
+  img.alt = floorName;
+  button.appendChild(img);
+
+  // Add the text
+  const span = document.createElement("span");
+  span.textContent = floorName;
+  button.appendChild(span);
+
+  // Add click event to load the floor
+  button.onclick = () => {
+    loadFloor(index); // Load the selected floor
+    highlightFloor(index); // Highlight the selected floor
+  };
+
+  // Append the button to the selector
+  selector.appendChild(button);
+});
+
+// Function to highlight the current floor
+function highlightFloor(index) {
+  // Remove the 'active' class from all floor buttons
+  const allButtons = document.querySelectorAll(".floor-item");
+  allButtons.forEach((btn) => btn.classList.remove("active"));
+
+  // Add the 'active' class to the selected floor button
+  allButtons[index].classList.add("active");
 }
+
+// Load the first floor by default and highlight it
+loadFloor(0);
+highlightFloor(0);
 
 
 // Load the first floor by default
-loadFloor(0);
 
 // Get references to the search bar and suggestions container
 const searchBar = document.getElementById("search-bar");
@@ -729,3 +771,4 @@ searchBar.addEventListener("input", (e) => {
   const matches = filterChests(query); // Get matching chests
   showSuggestions(matches); // Display suggestions
 });
+

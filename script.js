@@ -95,13 +95,13 @@ const floors = [
     { x: OriginX-384, y: OriginY+26, name: " 13", price: "0$", per: "32", active: false },
     { x: OriginX-384, y: OriginY+40, name: " 14", price: "0$", per: "32", active: false },
     { x: OriginX-384, y: OriginY+57, name: " 15", price: "0$", per: "32", active: false },
-    { x: OriginX-364, y: OriginY+92, name: " 16", price: "0$", per: "32", active: false },
-    { x: OriginX-364, y: OriginY+107, name: " 17", price: "0$", per: "32", active: false },
-    { x: OriginX-349, y: OriginY+139, name: " 18", price: "0$", per: "32", active: false },
-    { x: OriginX-349, y: OriginY+156, name: " 19", price: "0$", per: "32", active: false },
-    { x: OriginX-349, y: OriginY+173, name: " 20", price: "0$", per: "32", active: false },
-    { x: OriginX-315, y: OriginY+204, name: " 21", price: "0$", per: "32", active: false },
-    { x: OriginX-315, y: OriginY+222, name: " 22", price: "0$", per: "32", active: false },
+    { x: OriginX-364, y: OriginY+92, name: " Blue Ice", price: "18000$", per: "32", active: false },
+    { x: OriginX-364, y: OriginY+107, name: "Packed Ice", price: "2000$", per: "32", active: false },
+    { x: OriginX-349, y: OriginY+139, name: "Brown Mushroom Block", price: "0$", per: "32", active: false },
+    { x: OriginX-349, y: OriginY+156, name: "Red Mushroom Block", price: "0$", per: "32", active: false },
+    { x: OriginX-349, y: OriginY+173, name: "Mushroom Stem", price: "3000$", per: "32", active: false },
+    { x: OriginX-315, y: OriginY+204, name: "Muddy Mangrove Roots", price: "0$", per: "32", active: false },
+    { x: OriginX-315, y: OriginY+222, name: "Mangrove Roots", price: "0$", per: "32", active: false },
   ],
 
   [ //Floor 2
@@ -179,8 +179,8 @@ const floors = [
     { x: OriginX+222, y: OriginY+317, name: "Terracotta", price: "2500$", per: "32", active: true },
 
     // West
-    { x: OriginX-315, y: OriginY-220, name: "", price: "0$", per: "32", active: false },
-    { x: OriginX-315, y: OriginY-202, name: "", price: "0$", per: "32", active: false },
+    { x: OriginX-315, y: OriginY-220, name: "Amethyst Block", price: "2500$", per: "32", active: true },
+    { x: OriginX-315, y: OriginY-202, name: "Quartz Block", price: "17500$", per: "32", active: false },
     { x: OriginX-349, y: OriginY-171, name: "", price: "0$", per: "32", active: false },
     { x: OriginX-349, y: OriginY-154, name: "", price: "0$", per: "32", active: false },
     { x: OriginX-349, y: OriginY-137, name: "", price: "0$", per: "32", active: false },

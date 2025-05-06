@@ -180,7 +180,7 @@ const floors = [
 
     // West
     { x: OriginX-315, y: OriginY-220, name: "Amethyst Block", price: "2500$", per: "32", active: true },
-    { x: OriginX-315, y: OriginY-202, name: "Quartz Block", price: "17500$", per: "32", active: false },
+    { x: OriginX-315, y: OriginY-202, name: "Quartz Block", price: "17500$", per: "32", active: true },
     { x: OriginX-349, y: OriginY-171, name: "", price: "0$", per: "32", active: false },
     { x: OriginX-349, y: OriginY-154, name: "", price: "0$", per: "32", active: false },
     { x: OriginX-349, y: OriginY-137, name: "", price: "0$", per: "32", active: false },
@@ -254,7 +254,7 @@ const floors = [
     { x: OriginX+315, y: OriginY+222, name: "Loom", price: "500$", per: "8", active: true },
 
     // South
-    { x: OriginX-222, y: OriginY+315, name: "", price: "0$", per: "32", active: false },
+    { x: OriginX-222, y: OriginY+315, name: "Pointed Dripstone", price: "2000$", per: "16", active: true },
     { x: OriginX-204, y: OriginY+315, name: "", price: "0$", per: "32", active: false },
     { x: OriginX-173, y: OriginY+349, name: "Glass", price: "2500$", per: "32", active: true },
     { x: OriginX-156, y: OriginY+349, name: "White Wool", price: "2000$", per: "32", active: true },
@@ -377,7 +377,7 @@ const floors = [
     { x: OriginX+222, y: OriginY+317, name: "Gunpowder", price: "0$", per: "32", active: true },
 
     // West
-    { x: OriginX-315, y: OriginY-220, name: "Dispenser", price: "2000$", per: "16", active: true },
+    { x: OriginX-315, y: OriginY-220, name: "Dispenser", price: "4500$", per: "16", active: true },
     { x: OriginX-315, y: OriginY-202, name: "Dropper", price: "2000$", per: "16", active: true },
     { x: OriginX-349, y: OriginY-171, name: "Tripwire Hook", price: "500$", per: "16", active: true },
     { x: OriginX-349, y: OriginY-154, name: "Stone Button", price: "750$", per: "16", active: true },

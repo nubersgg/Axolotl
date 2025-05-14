@@ -147,7 +147,7 @@ const floors = [
     { x: OriginX-384, y: OriginY+26, name: " 13", price: "0$", per: "32", active: false },
     { x: OriginX-384, y: OriginY+40, name: " 14", price: "0$", per: "32", active: false },
     { x: OriginX-384, y: OriginY+57, name: " 15", price: "0$", per: "32", active: false },
-    { x: OriginX-364, y: OriginY+92, name: " Blue Ice", price: "18000$", per: "32", active: true },
+    { x: OriginX-364, y: OriginY+92, name: "Blue Ice", price: "18000$", per: "32", active: true },
     { x: OriginX-364, y: OriginY+107, name: "Packed Ice", price: "2000$", per: "32", active: true },
     { x: OriginX-349, y: OriginY+139, name: "Brown Mushroom Block", price: "0$", per: "32", active: true },
     { x: OriginX-349, y: OriginY+156, name: "Red Mushroom Block", price: "0$", per: "32", active: true },

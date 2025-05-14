@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warp Axolotl</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png" />
+  </head>
+<body>
+  <div id="main-container">
+    <div id="info-panel">
+      <h2 id="info-name">Click a chest</h2>
+      <p id="info-price"></p>
+      <p id="info-per"></p>
+      <p id="info-power"></p>
+      <img id="info-image" src="Images/default.png" alt="Chest Image" style="max-width: 200px; max-height: 200px;" />
+    </div>
+    <div id="floor-selector-container">
+      <h2 id="floor-selector-title">Select a Floor</h2>
+      <div id="floor-selector"></div>
+    </div>
+    <div id="search-container">
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search for a chest..."
+        autocomplete="off"
+      />
+      <ul id="suggestions"></ul>
+    </div>
+    <div id="floor-container">
+      <img id="floor-image" src="floors/floor1.png" alt="Floor" />
+      <div id="chest-grid"></div>
+      <div id="North-text">N</div>
+      <div id="East-text">E</div>
+      <div id="South-text">S</div>
+      <div id="West-text">W</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

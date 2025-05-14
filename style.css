@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#info-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 936px;
+  padding: 10px;
+  background: #727272;
+  font-family: Arial, sans-serif;
+}
+
+.floor-item.active {
+  background: #888; /* Highlight color for the active floor */
+  color: white; /* Ensure text is readable */
+}
+
+#floor-selector {
+  list-style: none;
+  padding: 0;
+  margin: 80px 0 0 -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+}
+
+.floor-item {
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  background: #444; /* Background color for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.3s;
+  text-align: left;
+}
+
+.floor-item:hover {
+  background: #666; /* Change background on hover */
+}
+
+.floor-item img {
+  width: 64px; /* Set image size */
+  height: 64px;
+  margin-right: 10px; /* Add spacing between image and text */
+  image-rendering: pixelated; /* Ensures sharp, pixelated rendering */
+  image-rendering: crisp-edges; /* Fallback for older browsers */
+}
+
+.floor-item span {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+#floor-selector-container {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  width: 1359px;
+  height: 936px;
+  padding: 10px;
+  background: #3a3a3a;
+  font-family: Arial, sans-serif;
+}
+
+#info-image {
+  width: 520px;
+  height: 520px;
+  image-rendering: pixelated; /* Ensures sharp, pixelated rendering */
+  image-rendering: crisp-edges; /* Fallback for older browsers */
+}
+
+#floor-container {
+  position: absolute;
+  top: 0;
+  left: 925px;
+  width: 935px;
+  height: 935px;
+}
+
+#floor-image {
+  width: 100%;
+  height: 100%;
+}
+
+#chest-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 935px;
+  height: 935px;
+}
+
+.chest {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: transparent; /* Fully transparent middle */
+  border: 2px solid rgba(0, 255, 0, 1); /* Solid green border */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.chest.inactive {
+  background-color: transparent; /* Keep the middle transparent */
+  border: 2px solid rgba(121, 121, 121, 0.7); /* Solid red border */
+}
+
+#search-container {
+  text-align: center;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 500px;
+}
+
+.chest.highlight {
+  border-color: rgb(25, 0, 255)!important; 
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+#search-bar {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#floor-selector {
+  text-align: center;
+  padding: 10px;
+  position:absolute;
+  top: 0;
+  left: 100px;
+}
+
+#suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+#suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#suggestions li:hover {
+  background: #f0f0f0;
+}
+
+#North-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 70px;
+  color: #ffffff;
+  position: absolute;
+  top: 160px;
+  left: 450px;
+}
+#East-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  position: absolute;
+  top: 450px;
+  left: 720px;
+}
+#South-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  position: absolute;
+  top: 730px;
+  left: 450px;
+}
+#West-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  position: absolute;
+  top: 450px;
+  left: 200px;
+}

@@ -52,6 +52,9 @@ function getOverlayColor(power) {
   };
 }
 
+
+
+
 // Example: 2 floors, with positions as pixel coords
 const floors = [
   [ //Floor 1
@@ -687,7 +690,7 @@ function loadFloor(index) {
     } else {
       console.warn(`No data found for key: ${key}`);
     }
-    
+
     // Add click event to show chest info
     div.onclick = () => showInfo(chest);
     grid.appendChild(div);
@@ -732,11 +735,6 @@ function showInfo(chest) {
   infoImage.src = imagePath;
   infoImage.alt = chest.name;
   infoImage.onerror = () => {
-  console.log(`Loading image: ${imagePath}`); // Debugging
-  infoImage.src = imagePath;
-  infoImage.alt = chest.name;
-  infoImage.onerror = () => {
-    console.log(`Image not found: ${imagePath}, loading default image.`);
     infoImage.src = "Images/default.png"; // Fallback image if the chest image is missing
   };
 }

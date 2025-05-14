@@ -107,15 +107,31 @@ body {
   position: absolute;
   width: 17px;
   height: 17px;
+<<<<<<< HEAD
   background-color: transparent; /* Fully transparent middle */
   border: 2px solid rgba(0, 255, 0, 1); /* Solid green border */
+=======
+  background-color: rgba(0, 255, 0, 0.3);
+  border: 2px solid rgba(0, 255, 0, 0.7);
+>>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d
   box-sizing: border-box;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .chest.inactive {
   background-color: transparent; /* Keep the middle transparent */
   border: 2px solid rgba(121, 121, 121, 0.7); /* Solid red border */
+=======
+.chest.NoStock {
+  background-color: rgba(217, 255, 0, 0.3);
+  border: 2px solid rgba(238, 255, 0, 0.7);
+}
+
+.chest.inactive {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 2px solid rgba(255, 0, 0, 0.7);
+>>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d
 }
 
 #search-container {
@@ -127,7 +143,12 @@ body {
 }
 
 .chest.highlight {
+<<<<<<< HEAD
   border-color: rgb(25, 0, 255)!important; 
+=======
+  background-color: rgba(38, 0, 255, 0.541); /* Yellow highlight */
+  border-color: rgb(25, 0, 255);
+>>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d
   z-index: 10; /* Ensure it appears above other elements */
 }
 

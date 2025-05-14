@@ -3,7 +3,6 @@ let currentFloor = 0;
 const OriginX =458;
 const OriginY = 460;
 const scaleFactor = 1.10;
-<<<<<<< HEAD
 
 let stockData = {};
 
@@ -53,11 +52,6 @@ function getOverlayColor(power) {
   };
 }
 
-
-
-
-=======
->>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d
 // Example: 2 floors, with positions as pixel coords
 const floors = [
   [ //Floor 1
@@ -677,7 +671,6 @@ function loadFloor(index) {
     div.style.left = OriginX + (chest.x - OriginX) * scaleFactor + "px";
     div.style.top = OriginY + (chest.y - OriginY) * scaleFactor + "px";
 
-<<<<<<< HEAD
     // Fetch power level from stockData
     const key = chest.name.toLowerCase().replace(/ /g, " ");
     const chestData = stockData[key];
@@ -694,9 +687,7 @@ function loadFloor(index) {
     } else {
       console.warn(`No data found for key: ${key}`);
     }
-
-=======
->>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d
+    
     // Add click event to show chest info
     div.onclick = () => showInfo(chest);
     grid.appendChild(div);
@@ -725,14 +716,11 @@ function showInfo(chest) {
     chestDiv.classList.add("highlight");
   }
 
-<<<<<<< HEAD
   // Fetch power level from stockData
   const key = chest.name.toLowerCase().replace(/ /g, "_");
   const chestData = stockData[key];
   const power = chestData && chestData.power !== undefined ? chestData.power : "N/A";
 
-=======
->>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d
   // Update the info panel
   document.getElementById("info-name").textContent = chest.name;
   document.getElementById("info-price").textContent = "Price: " + chest.price;
@@ -741,17 +729,14 @@ function showInfo(chest) {
   // Display the chest image in the info section
   const infoImage = document.getElementById("info-image");
   const imagePath = getChestImage(chest.name);
-<<<<<<< HEAD
   infoImage.src = imagePath;
   infoImage.alt = chest.name;
   infoImage.onerror = () => {
-=======
   console.log(`Loading image: ${imagePath}`); // Debugging
   infoImage.src = imagePath;
   infoImage.alt = chest.name;
   infoImage.onerror = () => {
     console.log(`Image not found: ${imagePath}, loading default image.`);
->>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d
     infoImage.src = "Images/default.png"; // Fallback image if the chest image is missing
   };
 }
@@ -862,7 +847,6 @@ searchBar.addEventListener("input", (e) => {
   showSuggestions(matches); // Display suggestions
 });
 
-<<<<<<< HEAD
 async function init() {
   await loadStockData(); // Load stock data from the Gist
   loadFloor(0); // Load the first floor
@@ -870,5 +854,3 @@ async function init() {
 }
 
 init();
-=======
->>>>>>> 3acd5acf685c161c72944e6485f4e4086539cd6d

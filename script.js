@@ -330,7 +330,7 @@ const floors = [
     { x: OriginX+222, y: OriginY+317, name: "White Dye", price: "500$", per: "16", active: true },
 
     // West
-    { x: OriginX-315, y: OriginY-220, name: "Bell", price: "10000$", per: "1", active: true },
+    { x: OriginX-315, y: OriginY-220, name: "Bell", price: "30000$", per: "1", active: true },
     { x: OriginX-315, y: OriginY-202, name: "Ender Chest", price: "10000$", per: "1", active: true },
     { x: OriginX-349, y: OriginY-171, name: "Chiseled Bookshelf", price: "1000$", per: "16", active: true },
     { x: OriginX-349, y: OriginY-154, name: "Bookshelf", price: "2000$", per: "16", active: true },

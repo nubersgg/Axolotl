@@ -110,8 +110,8 @@ const floors = [
     // South
     { x: OriginX-222, y: OriginY+315, name: "Bamboo", price: "400$", per: "32", active: true },
     { x: OriginX-204, y: OriginY+315, name: "Bamboo Block", price: "1500$", per: "32", active: true },
-    { x: OriginX-173, y: OriginY+349, name: "Flowering Azalea", price: "4000$", per: "32", active: true },
-    { x: OriginX-156, y: OriginY+349, name: "Azalea", price: "4000$", per: "32", active: true },
+    { x: OriginX-173, y: OriginY+349, name: "Flowering Azalea", price: "4000$", per: "16", active: true },
+    { x: OriginX-156, y: OriginY+349, name: "Azalea", price: "4000$", per: "16", active: true },
     { x: OriginX-139, y: OriginY+349, name: "Azalea Leaves", price: "2500$", per: "32", active: true },
     { x: OriginX-106, y: OriginY+364, name: "Flowering Azalea Leaves", price: "3000$", per: "32", active: true },
     { x: OriginX-92, y: OriginY+364, name: "Cherry Leaves", price: "2500$", per: "32", active: true },
